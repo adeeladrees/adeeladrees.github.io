@@ -41,7 +41,8 @@ body {
   scroll-behavior: smooth;
 }
 
-body.nav-open {
+body.nav-open,
+body.lightbox-open {
   overflow: hidden;
 }
 
@@ -119,8 +120,10 @@ button {
 }
 
 .site-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -216,7 +219,7 @@ button {
 }
 
 .hero {
-  padding: clamp(6rem, 8vw, 9rem) clamp(1.5rem, 8vw, 5rem)
+  padding: clamp(8rem, 10vw, 11rem) clamp(1.5rem, 8vw, 5rem)
     clamp(6rem, 10vw, 8rem);
   display: flex;
   align-items: center;
@@ -323,7 +326,13 @@ button {
 
 .section {
   position: relative;
+  margin: clamp(2.5rem, 6vw, 4.5rem) 0;
   padding: clamp(4.5rem, 8vw, 7rem) clamp(1.5rem, 7vw, 4rem);
+  scroll-margin-top: 6.5rem;
+}
+
+.section:first-of-type {
+  margin-top: clamp(1.5rem, 4vw, 3rem);
 }
 
 .section::before {
@@ -417,7 +426,7 @@ button {
   background: rgba(5, 11, 23, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-md);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s ease, box-shadow 0.25s ease,
     border-color 0.25s ease;
@@ -430,23 +439,40 @@ button {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-.service-media {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 10;
-}
-
-.service-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(1.1);
-}
-
 .service-body {
-  padding: 1.8rem 1.8rem 2.1rem;
+  padding: 2.4rem 2.2rem;
   display: grid;
-  gap: 1rem;
+  gap: 1.4rem;
+  align-content: start;
+}
+
+.service-body h3 {
+  margin-bottom: 0.25rem;
+}
+
+.service-body > p {
+  color: rgba(229, 236, 255, 0.88);
+}
+
+.service-icon {
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, rgba(244, 209, 96, 0.9), rgba(244, 209, 96, 0.4));
+  display: grid;
+  place-items: center;
+  color: #05102a;
+  box-shadow: 0 14px 32px rgba(244, 209, 96, 0.25);
+}
+
+.service-icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  stroke: #05102a;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .service-body ul {
@@ -520,6 +546,7 @@ button {
   background: rgba(5, 11, 23, 0.5);
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 0;
 }
 
 .portfolio-item img {
@@ -540,10 +567,97 @@ button {
   transform: scale(1.08);
 }
 
-.portfolio-item figcaption {
-  padding: 1.1rem 1.35rem;
-  font-weight: 600;
-  color: rgba(229, 236, 255, 0.92);
+.portfolio-trigger {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: zoom-in;
+  border-radius: inherit;
+}
+
+.portfolio-trigger img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 8vw, 4rem);
+  background: rgba(5, 11, 23, 0.8);
+  backdrop-filter: blur(18px);
+  z-index: 2000;
+}
+
+.lightbox-content {
+  position: relative;
+  z-index: 1;
+  width: min(960px, 100%);
+  max-height: 90vh;
+  border-radius: var(--radius-md);
+  background: rgba(5, 11, 23, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: clamp(1.5rem, 4vw, 2rem);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(5, 11, 23, 0.75);
+  color: var(--color-text);
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+[data-lightbox-image] {
+  width: 100%;
+  height: auto;
+  max-height: calc(70vh - 3rem);
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: rgba(229, 236, 255, 0.8);
+  text-align: center;
+  font-size: 0.95rem;
 }
 
 .cta-card {
@@ -559,7 +673,7 @@ button {
 }
 
 .cta-card p {
-  color: rgba(5, 11, 23, 0.9);
+  color: rgba(229, 236, 255, 0.88);
   font-weight: 600;
 }
 
