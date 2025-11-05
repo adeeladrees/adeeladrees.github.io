@@ -1,431 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="The Draughtsman London LTD delivers precise measured surveys, planning application support and drone inspections for projects across London."
-    />
-    <title>The Draughtsman London LTD</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body id="top">
-    <header class="hero-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a class="brand" href="#top">The Draughtsman</a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-navigation"
-          data-nav-toggle
-        >
-          <span class="sr-only">Toggle navigation</span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="nav-menu" id="primary-navigation" data-open="false">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#portfolio">Work</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <span class="eyebrow">Surveying with purpose</span>
-          <h1 id="hero-title">
-            Precision drawings and insight for confident decisions.
-          </h1>
-          <p>
-            We combine meticulous detailing with the latest digital capture
-            methods to unlock planning approvals and buildable schemes across
-            London and the Home Counties.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#services">Explore services</a>
-            <a class="btn btn-outline" href="#contact">Book a call</a>
-          </div>
-          <div class="hero-highlights" aria-label="Key highlights">
-            <div>
-              <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-              <span
-                >Measured surveys, planning packs &amp; BIM-ready outputs.</span
-              >
-            </div>
-            <div>
-              <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
-              <span
-                >Responsive team covering Greater London &amp; nearby
-                counties.</span
-              >
-            </div>
-            <div>
-              <i class="fa-solid fa-user-check" aria-hidden="true"></i>
-              <span
-                >Collaborative briefing so every drawing reflects your
-                vision.</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-    <main>
-      <section id="about" class="section about">
-        <div class="section-intro">
-          <span class="eyebrow">About</span>
-          <h2>Traditional craft paired with modern surveying technology</h2>
-          <p>
-            The Draughtsman London LTD delivers the dependable drawings and
-            coordination our clients rely on. From first conversation to final
-            handover, we listen, translate your brief and ensure approvals
-            arrive without surprises.
-          </p>
-        </div>
-        <div class="about-content">
-          <p>
-            Whether you are preparing a planning submission, refining a design
-            package or validating an existing building, we tailor the approach
-            to your requirements. Our team works closely with architects,
-            homeowners and developers to keep every project moving.
-          </p>
-          <ul class="about-list">
-            <li>
-              <i class="fa-solid fa-comments" aria-hidden="true"></i>
-              Clear, collaborative briefing so the output matches your ambition
-            </li>
-            <li>
-              <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i>
-              Digital capture and traditional detailing for reliable
-              documentation
-            </li>
-            <li>
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              Flexible site visits and swift turnaround across London and
-              surrounding areas
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section id="services" class="section services">
-        <div class="section-intro">
-          <span class="eyebrow">Services</span>
-          <h2>Surveying support that moves projects forward</h2>
-          <p>
-            Choose a single service or combine packages for a seamless
-            end-to-end experience.
-          </p>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <div class="service-body">
-              <div class="service-icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                  focusable="false"
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="The Draughtsman London LTD delivers precise measured surveys, planning application support and drone inspections for projects across London."
+        />
+        <title>The Draughtsman London LTD</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body id="top">
+        <header class="hero-header">
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a class="brand" href="#top">The Draughtsman London</a>
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                    data-nav-toggle
                 >
-                  <rect x="12" y="12" width="24" height="24" rx="4" />
-                  <path d="M12 30h24" />
-                  <path d="M18 30v6" />
-                  <path d="M24 30v6" />
-                  <path d="M30 30v6" />
-                  <path d="M18 22l6-6 6 6" />
-                  <path d="M18 22h12" />
-                  <path d="M24 16v14" />
-                </svg>
-              </div>
-              <h3>Measured Surveys</h3>
-              <p>
-                Detailed building surveys for refurbishments, extensions and
-                valuations, delivered with the precision needed to unlock
-                accurate design work.
-              </p>
-              <ul>
-                <li>Laser-accurate floor plans, elevations and sections</li>
-                <li>Planning-ready drawing packs for local authorities</li>
-                <li>Ideal for estimators, project managers and design teams</li>
-              </ul>
-            </div>
-          </article>
-          <article class="service-card">
-            <div class="service-body">
-              <div class="service-icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                  focusable="false"
+                    <span class="sr-only">Toggle navigation</span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-menu" id="primary-navigation" data-open="false">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#process">Process</a>
+                    <a href="#portfolio">Work</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-content">
+                    <span class="eyebrow">Surveying with purpose</span>
+                    <h1 id="hero-title">
+                        Precision drawings and insight for confident decisions.
+                    </h1>
+                    <p>
+                        We combine meticulous detailing with the latest digital
+                        capture methods to unlock planning approvals and
+                        buildable schemes across London and the Home Counties.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#services"
+                            >Explore services</a
+                        >
+                        <a class="btn btn-outline" href="#contact"
+                            >Book a call</a
+                        >
+                    </div>
+                    <div class="hero-highlights" aria-label="Key highlights">
+                        <div>
+                            <i
+                                class="fa-solid fa-layer-group"
+                                aria-hidden="true"
+                            ></i>
+                            <span
+                                >Measured surveys, planning packs &amp;
+                                BIM-ready outputs.</span
+                            >
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-map-location-dot"
+                                aria-hidden="true"
+                            ></i>
+                            <span
+                                >Responsive team covering Greater London &amp;
+                                nearby counties.</span
+                            >
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-user-check"
+                                aria-hidden="true"
+                            ></i>
+                            <span
+                                >Collaborative briefing so every drawing
+                                reflects your vision.</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section id="about" class="section about">
+                <div class="section-intro">
+                    <span class="eyebrow">About</span>
+                    <h2>Everything Begins with a Draught</h2>
+                    <p>
+                        At The Draughtsman London Ltd, we believe every project
+                        begins with a draught. A draught is more than just a
+                        drawing, it's the first act of creation, the line that
+                        turns vision into reality.
+                    </p>
+                </div>
+                <div class="about-content">
+                    <div class="about-copy">
+                        <p>
+                            From measured surveys and planning applications to
+                            building regulations, party wall notices, and
+                            advanced LiDAR and drone inspections, our work is
+                            built on clarity, accuracy, and trust. Each project
+                            starts with a precise draught that sets the
+                            foundation for smooth approvals and confident
+                            construction.
+                        </p>
+                        <p>
+                            Our story began the same way, small drawings for
+                            homeowners that grew into a practice combining
+                            traditional surveying expertise with modern
+                            technology. Today, we continue to transform those
+                            early lines into approvals, buildings, and lasting
+                            results.
+                        </p>
+                        <p>
+                            Because whether on paper, in writing, or in bricks
+                            and mortar everything begins with a draught.
+                        </p>
+                    </div>
+                    <div class="about-highlights" aria-label="Core strengths">
+                        <ul class="about-list">
+                            <li>
+                                <i
+                                    class="fa-solid fa-comments"
+                                    aria-hidden="true"
+                                ></i>
+                                Clear, collaborative briefing so the output
+                                matches your ambition
+                            </li>
+                            <li>
+                                <i
+                                    class="fa-solid fa-circle-nodes"
+                                    aria-hidden="true"
+                                ></i>
+                                Digital capture and traditional detailing for
+                                reliable documentation
+                            </li>
+                            <li>
+                                <i
+                                    class="fa-solid fa-clock"
+                                    aria-hidden="true"
+                                ></i>
+                                Flexible site visits and swift turnaround across
+                                London and surrounding areas
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="section services">
+                <div class="section-intro">
+                    <span class="eyebrow">Services</span>
+                    <h2>Surveying support that moves projects forward</h2>
+                    <p>
+                        Choose a single service or combine packages for a
+                        seamless end-to-end experience.
+                    </p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <div class="service-body">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false"
+                                    stroke="currentColor"
+                                >
+                                    <rect
+                                        x="24"
+                                        y="14"
+                                        width="30"
+                                        height="32"
+                                        rx="6"
+                                    />
+                                    <path
+                                        d="M20 14a6 6 0 0 0-12 6v18a10 10 0 0 0 10 10h26"
+                                    />
+                                    <path d="M24 20h18" />
+                                    <path d="M24 26h12" />
+                                    <path d="M24 32l14 14h-14z" />
+                                    <path d="M32 34l6 6" />
+                                </svg>
+                            </div>
+                            <h3>Measured Surveys</h3>
+                            <p>
+                                Detailed building surveys for refurbishments,
+                                extensions and valuations, delivered with the
+                                precision needed to unlock accurate design work.
+                            </p>
+                            <ul>
+                                <li>
+                                    Laser-accurate floor plans, elevations and
+                                    sections
+                                </li>
+                                <li>
+                                    Planning-ready drawing packs for local
+                                    authorities
+                                </li>
+                                <li>
+                                    Ideal for estimators, project managers and
+                                    design teams
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-body">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        d="M10 24l12-12a4 4 0 0 1 5.7 0l3.6 3.6a4 4 0 0 0 5.7 0l3.6-3.6a4 4 0 0 1 5.7 0L54 24"
+                                    />
+                                    <path
+                                        d="M20 34l7.1 7.1a4 4 0 0 0 5.6 0l8.6-8.6a3 3 0 0 0 0-4.2L34 22"
+                                    />
+                                    <path d="M20 28l6 6" />
+                                    <path d="M24 24l6 6" />
+                                    <path d="M12 30l6-6" />
+                                    <path d="M52 30l-6-6" />
+                                    <path d="M34 38l4 4" />
+                                </svg>
+                            </div>
+                            <h3>Planning Applications</h3>
+                            <p>
+                                From feasibility to submission, we prepare and
+                                coordinate documentation that meets planning
+                                policy while communicating the story of your
+                                proposal.
+                            </p>
+                            <ul>
+                                <li>
+                                    Feasibility reviews to flag constraints
+                                    early
+                                </li>
+                                <li>
+                                    Design development aligned with planning
+                                    strategy
+                                </li>
+                                <li>
+                                    Complete application packs and submission
+                                    support
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-body">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false"
+                                    stroke="currentColor"
+                                >
+                                    <rect
+                                        x="26"
+                                        y="18"
+                                        width="12"
+                                        height="28"
+                                        rx="6"
+                                    />
+                                    <line x1="32" y1="18" x2="32" y2="12" />
+                                    <line x1="32" y1="46" x2="32" y2="52" />
+                                    <line x1="24" y1="24" x2="12" y2="12" />
+                                    <line x1="40" y1="24" x2="52" y2="12" />
+                                    <line x1="24" y1="40" x2="12" y2="52" />
+                                    <line x1="40" y1="40" x2="52" y2="52" />
+                                    <circle cx="12" cy="12" r="4" />
+                                    <circle cx="52" cy="12" r="4" />
+                                    <circle cx="12" cy="52" r="4" />
+                                    <circle cx="52" cy="52" r="4" />
+                                    <path d="M28 26h8" />
+                                    <path d="M28 38h8" />
+                                </svg>
+                            </div>
+                            <h3>Drone Inspection</h3>
+                            <p>
+                                CAA-licensed drone surveys capture 4K imagery
+                                for roofs, façades and hard-to-reach details,
+                                giving you safe and rapid insights.
+                            </p>
+                            <ul>
+                                <li>
+                                    High-resolution imagery and video
+                                    deliverables
+                                </li>
+                                <li>
+                                    Pinpoint maintenance issues before they
+                                    escalate
+                                </li>
+                                <li>
+                                    A2 CofC certified pilots with full insurance
+                                    cover
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-body">
+                            <div class="service-icon" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 64 64"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    focusable="false"
+                                    stroke="currentColor"
+                                >
+                                    <rect
+                                        x="12"
+                                        y="14"
+                                        width="40"
+                                        height="36"
+                                        rx="6"
+                                    />
+                                    <path d="M12 22h40" />
+                                    <path d="M12 42h40" />
+                                    <path d="M20 30h8" />
+                                    <path d="M36 30h8" />
+                                    <path d="M24 34l4-4 4 4" />
+                                    <path d="M40 34l4-4 4 4" />
+                                </svg>
+                            </div>
+                            <h3>Party Wall Matters</h3>
+                            <p>
+                                Guidance and documentation aligned with the
+                                Party Wall Act 1996 to manage neighbour
+                                agreements and keep construction programmes on
+                                track.
+                            </p>
+                            <ul>
+                                <li>
+                                    Party Wall Act 1996 notices drafted and
+                                    served
+                                </li>
+                                <li>
+                                    Schedules of condition with supporting
+                                    photography
+                                </li>
+                                <li>
+                                    Coordination with adjoining owners and
+                                    surveyors
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="process" class="section process">
+                <div class="section-intro">
+                    <span class="eyebrow">Process</span>
+                    <h2>A collaborative approach from briefing to delivery</h2>
+                    <p>
+                        We keep communications clear and milestones transparent,
+                        so you always know the status of your project.
+                    </p>
+                </div>
+                <ol class="process-steps">
+                    <li>
+                        <span class="step-badge">1</span>
+                        <div>
+                            <h3>Discover</h3>
+                            <p>
+                                Start with a no-obligation call to understand
+                                your scope, timescales and planning goals.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-badge">2</span>
+                        <div>
+                            <h3>Capture</h3>
+                            <p>
+                                We visit site, gather precise measurements and
+                                coordinate with stakeholders to prevent
+                                surprises.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="step-badge">3</span>
+                        <div>
+                            <h3>Deliver</h3>
+                            <p>
+                                Receive clear, approval-ready drawings and
+                                documentation, with revisions handled quickly
+                                when needed.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+            <section id="portfolio" class="section portfolio">
+                <div class="section-intro">
+                    <span class="eyebrow">Work</span>
+                    <h2>Samples</h2>
+                    <p>
+                        A snapshot of the type of deliverables we provide for
+                        residential, commercial and mixed-use schemes.
+                    </p>
+                </div>
+                <div class="portfolio-grid">
+                    <figure class="portfolio-item">
+                        <button
+                            class="portfolio-trigger"
+                            type="button"
+                            data-portfolio-src="assets/img/portfolio/01-full.jpg"
+                        >
+                            <img
+                                src="assets/img/portfolio/01-thumbnail.jpg"
+                                alt="Survey drawing sample 1"
+                            />
+                        </button>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <button
+                            class="portfolio-trigger"
+                            type="button"
+                            data-portfolio-src="assets/img/portfolio/02-full.jpg"
+                        >
+                            <img
+                                src="assets/img/portfolio/02-thumbnail.jpg"
+                                alt="Survey drawing sample 2"
+                            />
+                        </button>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <button
+                            class="portfolio-trigger"
+                            type="button"
+                            data-portfolio-src="assets/img/portfolio/03-full.jpg"
+                        >
+                            <img
+                                src="assets/img/portfolio/03-thumbnail.jpg"
+                                alt="Survey drawing sample 3"
+                            />
+                        </button>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <button
+                            class="portfolio-trigger"
+                            type="button"
+                            data-portfolio-src="assets/img/portfolio/04-full.jpg"
+                        >
+                            <img
+                                src="assets/img/portfolio/04-thumbnail.jpg"
+                                alt="Survey drawing sample 4"
+                            />
+                        </button>
+                    </figure>
+                </div>
+            </section>
+            <section class="section cta">
+                <div class="cta-card">
+                    <div>
+                        <h2>Let's get your next project moving</h2>
+                        <p>
+                            Share a few details and we'll arrange a time to
+                            discuss your plans, survey requirements and ideal
+                            outcomes.
+                        </p>
+                    </div>
+                    <a class="btn btn-primary" href="#contact"
+                        >Start the conversation</a
+                    >
+                </div>
+            </section>
+            <section id="contact" class="section contact">
+                <div class="section-intro">
+                    <span class="eyebrow">Contact</span>
+                    <h2>Tell us about your project</h2>
+                    <p>
+                        We typically respond within one business day. Include as
+                        much context as you can and we'll tailor our reply.
+                    </p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <div>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <span
+                                >Prefer to talk it through? Request a callback
+                                in the form and we'll schedule a time that suits
+                                you.</span
+                            >
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-location-dot"
+                                aria-hidden="true"
+                            ></i>
+                            <span
+                                >Based in London and supporting surrounding
+                                counties.</span
+                            >
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-clock-rotate-left"
+                                aria-hidden="true"
+                            ></i>
+                            <span>Flexible site visits and survey slots.</span>
+                        </div>
+                    </div>
+                    <form
+                        class="contact-form"
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                    >
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="7fda87c1-b1a3-4d98-88a7-ba9526b6f27e"
+                        />
+                        <label>
+                            Name
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                placeholder="Your name"
+                            />
+                        </label>
+                        <label>
+                            Email
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="you@example.com"
+                            />
+                        </label>
+                        <label>
+                            Project details
+                            <textarea
+                                name="message"
+                                rows="5"
+                                required
+                                placeholder="Share site address, scope and timelines..."
+                            ></textarea>
+                        </label>
+                        <button type="submit" class="btn btn-primary">
+                            Submit form
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <div class="lightbox" data-lightbox hidden>
+            <div class="lightbox-backdrop" data-lightbox-close></div>
+            <div class="lightbox-content" role="dialog" aria-modal="true">
+                <button
+                    class="lightbox-close"
+                    type="button"
+                    aria-label="Close image preview"
+                    data-lightbox-close
                 >
-                  <rect x="10" y="12" width="28" height="24" rx="4" />
-                  <path d="M10 24h12v-12" />
-                  <path d="M22 18h16" />
-                  <path d="M30 18v18" />
-                  <path d="M22 30h8" />
-                  <path d="M18 36v-6" />
-                </svg>
-              </div>
-              <h3>Planning Applications</h3>
-              <p>
-                From feasibility to submission, we prepare and coordinate
-                documentation that meets planning policy while communicating the
-                story of your proposal.
-              </p>
-              <ul>
-                <li>Feasibility reviews to flag constraints early</li>
-                <li>Design development aligned with planning strategy</li>
-                <li>Complete application packs and submission support</li>
-              </ul>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <img src="" alt="" data-lightbox-image />
+                <p class="lightbox-caption" data-lightbox-caption></p>
             </div>
-          </article>
-          <article class="service-card">
-            <div class="service-body">
-              <div class="service-icon" aria-hidden="true">
-                <svg
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                  focusable="false"
-                >
-                  <circle cx="24" cy="24" r="6" />
-                  <path d="M20 20l-6-6" />
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M28 20l6-6" />
-                  <circle cx="36" cy="12" r="4" />
-                  <path d="M20 28l-6 6" />
-                  <circle cx="12" cy="36" r="4" />
-                  <path d="M28 28l6 6" />
-                  <circle cx="36" cy="36" r="4" />
-                </svg>
-              </div>
-              <h3>Drone Inspection</h3>
-              <p>
-                CAA-licensed drone surveys capture 4K imagery for roofs, façades
-                and hard-to-reach details, giving you safe and rapid insights.
-              </p>
-              <ul>
-                <li>High-resolution imagery and video deliverables</li>
-                <li>Pinpoint maintenance issues before they escalate</li>
-                <li>A2 CofC certified pilots with full insurance cover</li>
-              </ul>
-            </div>
-          </article>
         </div>
-      </section>
-      <section id="process" class="section process">
-        <div class="section-intro">
-          <span class="eyebrow">Process</span>
-          <h2>A collaborative approach from briefing to delivery</h2>
-          <p>
-            We keep communications clear and milestones transparent, so you
-            always know the status of your project.
-          </p>
-        </div>
-        <ol class="process-steps">
-          <li>
-            <span class="step-badge">1</span>
-            <div>
-              <h3>Discover</h3>
-              <p>
-                Start with a no-obligation call to understand your scope,
-                timescales and planning goals.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="step-badge">2</span>
-            <div>
-              <h3>Capture</h3>
-              <p>
-                We visit site, gather precise measurements and coordinate with
-                stakeholders to prevent surprises.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="step-badge">3</span>
-            <div>
-              <h3>Deliver</h3>
-              <p>
-                Receive clear, approval-ready drawings and documentation, with
-                revisions handled quickly when needed.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-      <section id="portfolio" class="section portfolio">
-        <div class="section-intro">
-          <span class="eyebrow">Work</span>
-          <h2>Recent drawings and survey outputs</h2>
-          <p>
-            A snapshot of the type of deliverables we provide for residential,
-            commercial and mixed-use schemes.
-          </p>
-        </div>
-        <div class="portfolio-grid">
-          <figure class="portfolio-item">
-            <button
-              class="portfolio-trigger"
-              type="button"
-              data-portfolio-src="assets/img/portfolio/01-full.jpg"
-            >
-              <img
-                src="assets/img/portfolio/01-thumbnail.jpg"
-                alt="Survey drawing sample 1"
-              />
-            </button>
-          </figure>
-          <figure class="portfolio-item">
-            <button
-              class="portfolio-trigger"
-              type="button"
-              data-portfolio-src="assets/img/portfolio/02-full.jpg"
-            >
-              <img
-                src="assets/img/portfolio/02-thumbnail.jpg"
-                alt="Survey drawing sample 2"
-              />
-            </button>
-          </figure>
-          <figure class="portfolio-item">
-            <button
-              class="portfolio-trigger"
-              type="button"
-              data-portfolio-src="assets/img/portfolio/03-full.jpg"
-            >
-              <img
-                src="assets/img/portfolio/03-thumbnail.jpg"
-                alt="Survey drawing sample 3"
-              />
-            </button>
-          </figure>
-          <figure class="portfolio-item">
-            <button
-              class="portfolio-trigger"
-              type="button"
-              data-portfolio-src="assets/img/portfolio/04-full.jpg"
-            >
-              <img
-                src="assets/img/portfolio/04-thumbnail.jpg"
-                alt="Survey drawing sample 4"
-              />
-            </button>
-          </figure>
-        </div>
-      </section>
-      <section class="section cta">
-        <div class="cta-card">
-          <div>
-            <h2>Let's get your next project moving</h2>
-            <p>
-              Share a few details and we'll arrange a time to discuss your
-              plans, survey requirements and ideal outcomes.
-            </p>
-          </div>
-          <a class="btn btn-primary" href="#contact">Start the conversation</a>
-        </div>
-      </section>
-      <section id="contact" class="section contact">
-        <div class="section-intro">
-          <span class="eyebrow">Contact</span>
-          <h2>Tell us about your project</h2>
-          <p>
-            We typically respond within one business day. Include as much
-            context as you can and we'll tailor our reply.
-          </p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-details">
-            <div>
-              <i class="fa-solid fa-phone" aria-hidden="true"></i>
-              <span
-                >Prefer to talk it through? Request a callback in the form and
-                we'll schedule a time that suits you.</span
-              >
-            </div>
-            <div>
-              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-              <span>Based in London and supporting surrounding counties.</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
-              <span
-                >Flexible site visits and survey slots, including early mornings
-                and weekends by arrangement.</span
-              >
-            </div>
-          </div>
-          <form
-            class="contact-form"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="7fda87c1-b1a3-4d98-88a7-ba9526b6f27e"
-            />
-            <label>
-              Name
-              <input type="text" name="name" required placeholder="Your name" />
-            </label>
-            <label>
-              Email
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-              />
-            </label>
-            <label>
-              Project details
-              <textarea
-                name="message"
-                rows="5"
-                required
-                placeholder="Share site address, scope and timelines..."
-              ></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary">Submit form</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <div class="lightbox" data-lightbox hidden>
-      <div class="lightbox-backdrop" data-lightbox-close></div>
-      <div class="lightbox-content" role="dialog" aria-modal="true">
-        <button
-          class="lightbox-close"
-          type="button"
-          aria-label="Close image preview"
-          data-lightbox-close
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <img src="" alt="" data-lightbox-image />
-        <p class="lightbox-caption" data-lightbox-caption></p>
-      </div>
-    </div>
-    <footer class="site-footer">
-      <div>The Draughtsman London LTD</div>
-      <div>Company Number: 10167825</div>
-      <a href="#top" class="back-to-top">Back to top</a>
-    </footer>
-    <script src="js/scripts.js" defer></script>
-  </body>
+        <footer class="site-footer">
+            <div>The Draughtsman London LTD</div>
+            <div>Company Number: 10167825</div>
+            <a href="#top" class="back-to-top">Back to top</a>
+        </footer>
+        <script src="js/scripts.js" defer></script>
+    </body>
 </html>

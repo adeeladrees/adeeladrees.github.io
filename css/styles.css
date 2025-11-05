@@ -380,21 +380,40 @@ button {
 }
 
 .about-content {
-  display: grid;
-  gap: clamp(2rem, 4vw, 3.5rem);
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+  text-align: center;
 }
 
-.about-content p {
+.about-copy {
+  max-width: 780px;
+  display: grid;
+  gap: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.about-copy p {
   margin: 0;
   color: rgba(229, 236, 255, 0.9);
+}
+
+.about-highlights {
+  width: 100%;
 }
 
 .about-list {
   list-style: none;
   display: grid;
-  gap: 1.1rem;
+  gap: clamp(1.1rem, 2vw, 1.5rem);
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .about-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .about-list li {
@@ -407,6 +426,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-sm);
   color: rgba(229, 236, 255, 0.86);
+  text-align: left;
 }
 
 .about-list i {
